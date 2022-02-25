@@ -8,6 +8,7 @@ public class Recursos{
         for (int i = 0; i < posicio.length; i++) {
             posicio [i] = i+10;
         }
+        
             System.out.println(BoxDrawing.HORITZONTAL);                      
             System.out.println("|" + posicio[17] + " | " + posicio[16] + " | " + posicio[15] + " | " + posicio[14] + " | " + posicio[13] + " | " + posicio[12] + " | " +posicio[11] + " |");
             System.out.println(BoxDrawing.HORITZONTAL + BoxDrawing.HORITZONTAL+BoxDrawing.HORITZONTAL + BoxDrawing.HORITZONTAL);
