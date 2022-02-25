@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.estebanMarcProj.joc.ui.*;
 
-public class Main{
+public class start{
     public static void main(String [] args){
         int posicio [] = new int [42];
 
