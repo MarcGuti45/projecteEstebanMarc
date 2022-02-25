@@ -1,6 +1,7 @@
 package com.estebanMarcProj.joc.ui;
 
 import java.util.Scanner;
+import com.estebanMarcProj.utils.BoxDrawing;
 
 public class Recursos{
     public static void showTable(String [] args){
@@ -9,7 +10,7 @@ public class Recursos{
         for (int i = 0; i < posicio.length; i++) {
             posicio [i] = i+10;
         }
-            System.out.println("------------------------------------");                      
+            System.out.println("");                      
             System.out.println("| " + posicio[17] + " | " + posicio[16] + " | " + posicio[15] + " | " + posicio[14] + " | " + posicio[13] + " | " + posicio[12] + " | " +posicio[11] + " |");
             System.out.println("------------------------------------");
             System.out.println("| " + posicio[18] + " | " + posicio[33] + " | " + posicio[32] + " | " + posicio[31] + " | " + posicio[30] + " | " + posicio[29] + " | " +posicio[10] + " |");
