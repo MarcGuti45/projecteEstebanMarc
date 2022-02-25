@@ -2,7 +2,6 @@ package com.estebanMarcProj.joc.ui;
 
 import java.util.Scanner;
 import com.estebanMarcProj.utils.BoxDrawing;
-
 public class Recursos{
     public static void showTable(String [] args){
         int posicio [] = new int [42];
