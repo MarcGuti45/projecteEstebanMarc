@@ -18,11 +18,14 @@ public class start{
             numeroJugadors = kb.nextInt();
 
             if(numeroJugadors < 2 || numeroJugadors > 4){
-                System.out.println(Colors.RED + "ERROR: Ha d’escollir un número entre 0 i 3" + Colors.ANSI_RESET);
-            }
-            
+                System.out.println(Colors.RED + "ERROR: Ha d’escollir entre 2 i 4 jugadors" + Colors.ANSI_RESET);
+            } 
+
         }while(numeroJugadors < 2 || numeroJugadors > 4);
 
+        System.out.println(Colors.GREEN + "    ===================" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "     COMENÇA EL JOC !" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "    ===================" + Colors.ANSI_RESET);
         
 
         Recursos.showTable(posicio);
