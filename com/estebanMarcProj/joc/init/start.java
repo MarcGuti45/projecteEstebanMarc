@@ -10,10 +10,8 @@ public class start{
         Scanner kb = new Scanner (System.in);
 
         int posicio [] = new int [36];
-
         int numeroJugadors = 0;
 
-        
         Recursos.askPlayers(numeroJugadors);
         Recursos.showTable(posicio);
     }

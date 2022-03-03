@@ -3,6 +3,7 @@ package com.estebanMarcProj.joc.ui;
 import java.util.Scanner;
 import com.estebanMarcProj.utils.BoxDrawing;
 import com.estebanMarcProj.utils.Colors;
+
 public class Recursos{
     public static void showTable(int posicio []){
     
@@ -27,16 +28,26 @@ public class Recursos{
 
     public static void askPlayers(int numeroJugadors){
         Scanner kb = new Scanner(System.in);
+        String jugadors [];
+
         do{
             System.out.println("Quantes persones jugarán? (2-4)");
             numeroJugadors = kb.nextInt();
+
+            jugadors = new String [numeroJugadors];
 
             if(numeroJugadors < 2 || numeroJugadors > 4){
                 System.out.println(Colors.RED + "ERROR: Ha d’escollir entre 2 i 4 jugadors" + Colors.ANSI_RESET);
             } 
 
         }while(numeroJugadors < 2 || numeroJugadors > 4);
+       
+        for (int i = 0; i < jugadors.length; i++) {
+            System.out.println("Jugador " + (i+1) + " introdueix el teu nom: ");
+            jugadors[i] = kb.next();
+        }
 
+        
         System.out.println(Colors.GREEN + "    ===================" + Colors.ANSI_RESET);
         System.out.println(Colors.GREEN + "     COMENÇA EL JOC !" + Colors.ANSI_RESET);
         System.out.println(Colors.GREEN + "    ===================" + Colors.ANSI_RESET);
