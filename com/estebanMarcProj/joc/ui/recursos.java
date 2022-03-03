@@ -47,10 +47,9 @@ public class Recursos{
             jugadors[i] = kb.next();
         }
 
-        
-        System.out.println(Colors.GREEN + "    ===================" + Colors.ANSI_RESET);
-        System.out.println(Colors.GREEN + "     COMENÇA EL JOC !" + Colors.ANSI_RESET);
-        System.out.println(Colors.GREEN + "    ===================" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "       - COMENÇA EL JOC -" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
     }
 }
 
