@@ -51,7 +51,10 @@ public class Recursos{
         System.out.println(Colors.GREEN + "       - COMENÇA EL JOC -" + Colors.ANSI_RESET);
         System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
     }
-}
 
+    public static void playerTurn(){
+        System.out.println();
+    }
+}
 
 
