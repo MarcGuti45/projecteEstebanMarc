@@ -30,6 +30,7 @@ public class start{
 
         Recursos.showTable(posicio);
         Recursos.playerTurn(torn, jugadorTorn, jugador1, jugador2);
+        Recursos.dados();
     }
 }
     

@@ -1,5 +1,6 @@
 package com.estebanMarcProj.joc.ui;
 
+import java.util.Random;
 import java.util.Scanner;
 import com.estebanMarcProj.utils.BoxDrawing;
 import com.estebanMarcProj.utils.Colors;
@@ -53,7 +54,27 @@ public class Recursos{
             jugadorTorn = jugador1;
         }
         System.out.println("Torn del jugador " + jugadorTorn + " tira el dau");
+
+    }
+    
+    public static void dados() {
+
+        Random ranNum = new Random();
+
+        System.out.print("Has tirado un dado!");
+        int resultado = 0;
+        int numeroAleatorio = 0;
+
+        for (int i = 0; i < 1; i++) {
+            numeroAleatorio = ranNum.nextInt(6) + 1;
+            resultado = resultado + numeroAleatorio;
+            System.out.print(" ");
+        }
+
+        System.out.println("");
+        System.out.println("Resultado: " + resultado);
     }
 }
+
 
 
