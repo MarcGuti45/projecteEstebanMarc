@@ -26,18 +26,21 @@ public class Recursos{
             System.out.println(BoxDrawing.ESQUINA_BOT_L + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.ESQUINA_BOT_R);       
     }
 
-    public static void askPlayers(int numeroJugadors, String jugador1, String jugador2){
+    public static String askPlayer1(String jugador1){
         Scanner kb = new Scanner(System.in);
 
         System.out.println("Introdueix el nom del jugador 1: ");
         jugador1 = kb.next();
+        return jugador1;
+        
+    }
+
+    public static String askPlayer2(String jugador2){
+        Scanner kb = new Scanner(System.in);
+
         System.out.println("Introdueix el nom del jugador 2: ");
         jugador2 = kb.next();
-       
-
-        System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
-        System.out.println(Colors.GREEN + "       - COMENÇA EL JOC -" + Colors.ANSI_RESET);
-        System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
+        return jugador2;
     }
 
     public static void playerTurn(int torn, String jugadorTorn, String jugador1, String jugador2){
@@ -45,11 +48,11 @@ public class Recursos{
             torn = 2;
             jugadorTorn = jugador2;
         }
-
         else {
             torn = 1;
             jugadorTorn = jugador1;
         }
+        System.out.println("Torn del jugador " + jugadorTorn + " tira el dau");
     }
 }
 

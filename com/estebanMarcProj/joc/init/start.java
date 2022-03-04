@@ -11,13 +11,25 @@ public class start{
 
         int posicio [] = new int [36];
         int numeroJugadors = 0;
-        int torn;
-        String jugadorTorn;
+        int torn = 2;
+        String jugadorTorn = "";
         String jugador1 = "";
         String jugador2 = "";
 
-        Recursos.askPlayers(numeroJugadors, jugador1, jugador2);
+        System.out.println(Colors.BLUE + " ===============================" + Colors.ANSI_RESET);
+        System.out.println(Colors.BLUE + "    - BENVINGUT AL TRIVIAL - " + Colors.ANSI_RESET);
+        System.out.println(Colors.BLUE + " ===============================" + Colors.ANSI_RESET);
+        System.out.println();
+
+        jugador1 = Recursos.askPlayer1(jugador1);
+        jugador2 = Recursos.askPlayer2(jugador2);
+
+        System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "       - COMENÇA EL JOC -" + Colors.ANSI_RESET);
+        System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
+
         Recursos.showTable(posicio);
+        Recursos.playerTurn(torn, jugadorTorn, jugador1, jugador2);
     }
 }
     
