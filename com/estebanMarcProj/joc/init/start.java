@@ -11,8 +11,12 @@ public class start{
 
         int posicio [] = new int [36];
         int numeroJugadors = 0;
+        int torn;
+        String jugadorTorn;
+        String jugador1 = "";
+        String jugador2 = "";
 
-        Recursos.askPlayers(numeroJugadors);
+        Recursos.askPlayers(numeroJugadors, jugador1, jugador2);
         Recursos.showTable(posicio);
     }
 }

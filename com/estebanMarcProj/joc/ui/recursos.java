@@ -26,34 +26,30 @@ public class Recursos{
             System.out.println(BoxDrawing.ESQUINA_BOT_L + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.TOP_T + BoxDrawing.HORITZONTAL.repeat(4) + BoxDrawing.ESQUINA_BOT_R);       
     }
 
-    public static void askPlayers(int numeroJugadors){
+    public static void askPlayers(int numeroJugadors, String jugador1, String jugador2){
         Scanner kb = new Scanner(System.in);
-        String jugadors [];
 
-        do{
-            System.out.println("Quantes persones jugarán? (2-4)");
-            numeroJugadors = kb.nextInt();
-
-            jugadors = new String [numeroJugadors];
-
-            if(numeroJugadors < 2 || numeroJugadors > 4){
-                System.out.println(Colors.RED + "ERROR: Ha d’escollir entre 2 i 4 jugadors" + Colors.ANSI_RESET);
-            } 
-
-        }while(numeroJugadors < 2 || numeroJugadors > 4);
+        System.out.println("Introdueix el nom del jugador 1: ");
+        jugador1 = kb.next();
+        System.out.println("Introdueix el nom del jugador 2: ");
+        jugador2 = kb.next();
        
-        for (int i = 0; i < jugadors.length; i++) {
-            System.out.println("Jugador " + (i+1) + " introdueix el teu nom: ");
-            jugadors[i] = kb.next();
-        }
 
         System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
         System.out.println(Colors.GREEN + "       - COMENÇA EL JOC -" + Colors.ANSI_RESET);
         System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
     }
 
-    public static void playerTurn(){
-        System.out.println();
+    public static void playerTurn(int torn, String jugadorTorn, String jugador1, String jugador2){
+        if (torn == 1){
+            torn = 2;
+            jugadorTorn = jugador2;
+        }
+
+        else {
+            torn = 1;
+            jugadorTorn = jugador1;
+        }
     }
 }
 
