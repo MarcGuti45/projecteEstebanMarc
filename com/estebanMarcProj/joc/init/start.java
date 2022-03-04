@@ -10,11 +10,12 @@ public class start{
         Scanner kb = new Scanner (System.in);
 
         int posicio [] = new int [36];
-        int numeroJugadors = 0;
         int torn = 2;
+        int posicioDau = 0;
         String jugadorTorn = "";
         String jugador1 = "";
         String jugador2 = "";
+        boolean guanyador = false;
 
         System.out.println(Colors.BLUE + " ===============================" + Colors.ANSI_RESET);
         System.out.println(Colors.BLUE + "    - BENVINGUT AL TRIVIAL - " + Colors.ANSI_RESET);
@@ -28,9 +29,13 @@ public class start{
         System.out.println(Colors.GREEN + "       - COMENÇA EL JOC -" + Colors.ANSI_RESET);
         System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
 
-        Recursos.showTable(posicio);
-        Recursos.playerTurn(torn, jugadorTorn, jugador1, jugador2);
-        Recursos.dados();
+        
+        // do{
+            Recursos.showTable(posicio);
+            Recursos.playerTurn(torn, jugadorTorn, jugador1, jugador2);
+            posicioDau = Recursos.dados();
+            Recursos.questions(posicioDau);
+        // }while(guanyador == false);
     }
 }
     

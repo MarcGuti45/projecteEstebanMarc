@@ -56,8 +56,8 @@ public class Recursos{
         System.out.println("Torn del jugador " + jugadorTorn + " tira el dau");
 
     }
-    
-    public static void dados() {
+
+    public static int dados() {
 
         Random ranNum = new Random();
 
@@ -73,6 +73,21 @@ public class Recursos{
 
         System.out.println("");
         System.out.println("Resultado: " + resultado);
+        return resultado;
+    }
+
+    public static void questions(int posicioDau){
+        Scanner kb = new Scanner(System.in);
+
+        String x;
+
+        System.out.println("El fundador d'Amazon es Jeff Bezos?");
+        x = kb.next();
+        if(x.equals("si")){
+            System.out.println("Resposta correcta!, avances " + posicioDau + " posicions");
+        } else{
+            System.out.println("Resposta incorrecta, et quedes al meteix lloc");
+        }
     }
 }
 
