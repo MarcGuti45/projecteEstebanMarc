@@ -1,8 +1,6 @@
 package com.estebanMarcProj.joc.init;
 
 import java.util.Scanner;
-import java.io.*;
-import java.util.Random;
 import com.estebanMarcProj.joc.ui.*;
 import com.estebanMarcProj.utils.*;
 

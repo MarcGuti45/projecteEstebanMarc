@@ -85,7 +85,7 @@ public class Recursos{
         Console input = System.console();
         int opcio;
         String seleccio; 
-        String llistatPreguntes[][] = new String [4][2];
+        String llistatPreguntes[][] = new String [10][2];
 
         llistatPreguntes[0][0] = "Quien fundó Amazon? \nA: Jeff Bezos \nB: Steve Jobs \nC: Mark Zuckerberg";
         llistatPreguntes[0][1] = "A";
@@ -95,18 +95,30 @@ public class Recursos{
         llistatPreguntes[2][1] = "B";
         llistatPreguntes[3][0] = "Els reis catolics van reinar entre? \nA: 1475 - 1515 \nB: 1470 - 1516 \nC: 1474 - 1516";
         llistatPreguntes[3][1] = "C";
+        llistatPreguntes[4][0] = "La capital de Paraguay es? \nA: Asuncion - 1515 \nB: Managua - 1516 \nC: San Diego";
+        llistatPreguntes[4][1] = "A";
+        llistatPreguntes[5][0] = "La batalla del Ebre va ocurrir durant? \nA: La primera guerra mundial \nB: La segona guerra mundial \nC: La guerra civil Espanyola";
+        llistatPreguntes[5][1] = "C";
+        llistatPreguntes[6][0] = "L'estat de solid a liquid s'anomena? \nA: Punt de fusio \nB: Punt d'ebullicio \nC: Transicio de fase";
+        llistatPreguntes[6][1] = "A";
+        llistatPreguntes[7][0] = "On es troba el museu del prat? \nA: Barcelona \nB: Madrid \nC: Sevilla";
+        llistatPreguntes[7][1] = "B";
+        llistatPreguntes[8][0] = "Per la comunitat d'Andalucio pasa el riu? \nA: Duero \nB: Guadiana \nC: Tajo";
+        llistatPreguntes[8][1] = "B";
+        llistatPreguntes[9][0] = "Qui va ser el primer president dels Estats Units? \nA: George Washintong \nB: Abraham Lincoln \nC: Barack Obama";
+        llistatPreguntes[9][1] = "A";
 
         int ronda = 0;
-        while (ronda < 4){
+        while (ronda < 1){
             opcio = aleatori.nextInt(4);
             System.out.println(llistatPreguntes[opcio][0]);
             seleccio = input.readLine();
             if (seleccio.equals(llistatPreguntes[opcio][1])){ 
-                System.out.println("¡Correcto!"); 
+                System.out.println("¡Correcte! Avances" +  posicioDau + " posicions"); 
             }
 
             else{ 
-                System.out.println("Incorrecto, la respuesta era " + llistatPreguntes[opcio][1]); 
+                System.out.println("Incorrecte, la respuesta era " + llistatPreguntes[opcio][1]); 
             }
             ronda += 1;
         }
