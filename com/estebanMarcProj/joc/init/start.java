@@ -1,7 +1,8 @@
 package com.estebanMarcProj.joc.init;
 
 import java.util.Scanner;
-
+import java.io.*;
+import java.util.Random;
 import com.estebanMarcProj.joc.ui.*;
 import com.estebanMarcProj.utils.*;
 
@@ -30,12 +31,12 @@ public class start{
         System.out.println(Colors.GREEN + "      ====================" + Colors.ANSI_RESET);
 
         
-        // do{
+        do{
             Recursos.showTable(posicio);
             Recursos.playerTurn(torn, jugadorTorn, jugador1, jugador2);
             posicioDau = Recursos.dados();
             Recursos.questions(posicioDau);
-        // }while(guanyador == false);
+        }while(!guanyador);
     }
-}
+} 
     

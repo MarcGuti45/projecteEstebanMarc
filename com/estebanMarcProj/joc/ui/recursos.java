@@ -1,6 +1,7 @@
 package com.estebanMarcProj.joc.ui;
 
 import java.util.Random;
+import java.io.*;
 import java.util.Scanner;
 import com.estebanMarcProj.utils.BoxDrawing;
 import com.estebanMarcProj.utils.Colors;
@@ -58,10 +59,12 @@ public class Recursos{
     }
 
     public static int dados() {
-
+        Scanner kb = new Scanner(System.in);
         Random ranNum = new Random();
+        System.out.println("Pulsa una tecla per tirar el dau: ");
+        String tecla = kb.next();
 
-        System.out.print("Has tirado un dado!");
+        System.out.print("Has llançat un dau!");
         int resultado = 0;
         int numeroAleatorio = 0;
 
@@ -72,24 +75,40 @@ public class Recursos{
         }
 
         System.out.println("");
-        System.out.println("Resultado: " + resultado);
+        System.out.println("Resultat: " + resultado);
         return resultado;
     }
 
     public static void questions(int posicioDau){
         Scanner kb = new Scanner(System.in);
+        Random aleatori = new Random();
+        Console input = System.console();
+        int opcio;
+        String seleccio; 
+        String llistatPreguntes[][] = new String [4][2];
 
-        String x;
+        llistatPreguntes[0][0] = "Quien fundó Amazon? \nA: Jeff Bezos \nB: Steve Jobs \nC: Mark Zuckerberg";
+        llistatPreguntes[0][1] = "A";
+        llistatPreguntes[1][0] = "Vigo pertany a la provincia de? \nA: Lugo \nB: Pontevedra \nC: La Coruña";
+        llistatPreguntes[1][1] = "B";
+        llistatPreguntes[2][0] = "Com va morir Joana d'Arc? \nA: Decapitada \nB: Cremada  \nC: Envenenada";
+        llistatPreguntes[2][1] = "B";
+        llistatPreguntes[3][0] = "Els reis catolics van reinar entre? \nA: 1475 - 1515 \nB: 1470 - 1516 \nC: 1474 - 1516";
+        llistatPreguntes[3][1] = "C";
 
-        System.out.println("El fundador d'Amazon es Jeff Bezos?");
-        x = kb.next();
-        if(x.equals("si")){
-            System.out.println("Resposta correcta!, avances " + posicioDau + " posicions");
-        } else{
-            System.out.println("Resposta incorrecta, et quedes al meteix lloc");
+        int ronda = 0;
+        while (ronda < 4){
+            opcio = aleatori.nextInt(4);
+            System.out.println(llistatPreguntes[opcio][0]);
+            seleccio = input.readLine();
+            if (seleccio.equals(llistatPreguntes[opcio][1])){ 
+                System.out.println("¡Correcto!"); 
+            }
+
+            else{ 
+                System.out.println("Incorrecto, la respuesta era " + llistatPreguntes[opcio][1]); 
+            }
+            ronda += 1;
         }
     }
 }
-
-
-
